@@ -1,0 +1,141 @@
+/*
+
+CSS Units :)
+--------------------
+- rem (relative to the font-size of the root element)
+- em (relative to the font size of the element) 
+- px (pixels) 
+- % (relative to parent element)
+- vw (relative to 1% of the width)
+- vh (relative to 1% of the height)
+- ch (relative to the width of the "0" (zero))
+--------------------
+*/
+
+html,
+body {
+    margin: 0;
+    color: white;
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+    overflow: hidden; /* Stop the page from scrolling */
+}
+
+body {
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+/* 
+---------------------------------- 
+|                                |
+|             HEADER             |
+|                                |
+----------------------------------
+*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex; /* Sets the flexible length on flexible items */
+    justify-content: space-between;
+}
+
+header > span { /* Jelly text */
+    margin-left: 3vw; /* Moves the text to the right */
+    line-height: 7rem; /* Sets the height of a line box / Distance between lines and text */
+    vertical-align: middle; /* Sets vertical alignment of an inline */
+    font-size: 30px;
+    font-family: 'Sarina', cursive;
+}
+
+header > nav > a:last-child { /* Last element among a group of sibling elements / heart */
+    margin-right: 1vw;
+    padding-left: 0; /* Spacing between the insta and the heart */
+}
+
+header > nav > a:nth-last-child(2) { /* Select one or more elements based on their order / instragram */
+    margin-left: 2vw;
+    padding: 1vw; /* Spacing between the insta and the heart */
+}
+
+header > nav > a > i {
+    font-size: 20px;
+}
+
+nav > a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 7em;
+    vertical-align: middle;
+    font-family: 'Nunito', sans-serif;
+    padding: 18px;
+}
+
+#box { /* Box around the pricing */
+    width: 100vw;
+    height: 100vh;
+    background: #e91e63;
+    opacity: 1;
+    border-radius: 15px;
+    padding: 12px 15px;
+}
+
+#box:hover {
+    color: white;
+    opacity: 0.8;
+}
+
+#heart:hover {
+    color: #e91e63;
+}
+
+/* 
+---------------------------------- 
+|                                |
+|             MAIN               |
+|                                |
+----------------------------------
+*/
+
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.main > p {
+    padding: 0% 10%;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#subtitle {
+    font-size: 60px;
+    font-family: 'Nunito', sans-serif;
+}
+
+button {
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    background: #e91e63;
+    opacity: 1;
+    border-radius: 15px;
+    border: none;
+    padding: 12px 40px;
+    position: relative;
+    top: 5vh;
+}
+
+button:hover {
+    color: white;
+    opacity: 0.8;
+}
