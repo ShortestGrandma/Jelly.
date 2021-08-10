@@ -12,22 +12,18 @@ CSS Units :)
 --------------------
 */
 
+* {
+    box-sizing: border-box;
+  }
+  
+
 html,
 body {
     margin: 0;
     color: white;
     font-size: 16px;
     font-family: 'Source Sans Pro', sans-serif;
-    overflow: hidden; /* Stop the page from scrolling */
-}
-
-body {
-    background-image: url("../images/background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    width: 100%;
-    height: 100%;
+    /*overflow: hidden; Stop the page from scrolling */
 }
 
 /* 
@@ -69,7 +65,7 @@ header > nav > a > i {
     font-size: 20px;
 }
 
-nav > a {
+#navbar > a {
     color: white;
     font-weight: bold;
     text-decoration: none;
@@ -106,6 +102,15 @@ nav > a {
 */
 
 #home {
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+#home {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,3 +144,44 @@ button:hover {
     color: white;
     opacity: 0.8;
 }
+
+/* 
+---------------------------------- 
+|                                |
+|            PRICING             |
+|                                |
+----------------------------------
+*/
+
+#pricing {
+    color: black;
+    box-sizing: border-box;
+}
+
+#pricing > h1 {
+    text-align: center;
+}
+
+.column {
+    float: left;
+    width: 30%;
+    padding: 0 10px;
+  }
+  
+
+.card > p > i {font-size: 8vh;}
+
+.row {margin: 0 -5px 0 8vw;}
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
