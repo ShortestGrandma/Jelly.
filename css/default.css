@@ -16,20 +16,19 @@ CSS Units :)
     box-sizing: border-box;
   }
   
-
 html,
 body {
     margin: 0;
     color: white;
     font-size: 16px;
     font-family: 'Source Sans Pro', sans-serif;
-    /*overflow: hidden; Stop the page from scrolling */
+    overflow: auto;/*overflow: hidden; Stop the page from scrolling */
 }
 
 /* 
 ---------------------------------- 
 |                                |
-|             HEADER             |
+|          HEADER/NAV            |
 |                                |
 ----------------------------------
 */
@@ -39,40 +38,52 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    display: flex; /* Sets the flexible length on flexible items */
-    justify-content: space-between;
+    transition: background-color .5s ease;
 }
 
-header > span { /* Jelly text */
+.logo { /* Jelly text */
+    color: white;
     margin-left: 3vw; /* Moves the text to the right */
     line-height: 7rem; /* Sets the height of a line box / Distance between lines and text */
     vertical-align: middle; /* Sets vertical alignment of an inline */
+    text-decoration: none;
     font-size: 30px;
     font-family: 'Sarina', cursive;
 }
 
-header > nav > a:last-child { /* Last element among a group of sibling elements / heart */
-    margin-right: 1vw;
-    padding-left: 0; /* Spacing between the insta and the heart */
+.navbar { /* The whole navbarrr */
+    display: flex; /* Sets the flexible length on flexible items */
+    justify-content: space-between;
 }
 
-header > nav > a:nth-last-child(2) { /* Select one or more elements based on their order / instragram */
-    margin-left: 2vw;
-    padding: 1vw; /* Spacing between the insta and the heart */
-}
-
-header > nav > a > i {
-    font-size: 20px;
-}
-
-#navbar > a {
+.nav-link { /* Styling the nav links*/
     color: white;
     font-weight: bold;
+    position: relative;
     text-decoration: none;
     line-height: 7em;
     vertical-align: middle;
     font-family: 'Nunito', sans-serif;
     padding: 18px;
+}
+
+.nav-link:last-child { /* Last element among a group of sibling elements / heart */
+    margin-right: 1vw;
+    padding-left: 0 !important; /* Spacing between the insta and the heart */
+}
+
+.nav-link:nth-last-child(2) { /* Select one or more elements based on their order / instragram */
+    margin-left: 2vw;
+    padding: 1vw !important; /* Spacing between the insta and the heart */
+}
+
+.nav-link > i {
+    font-size: 20px;
+}
+
+.scrolling-active {
+    background-color: #fff;
+    box-shadow: 0 3px 1rem rgba(0,0,0.1);
 }
 
 #box { /* Box around the pricing */
@@ -128,9 +139,11 @@ header > nav > a > i {
     font-family: 'Nunito', sans-serif;
 }
 
-button {
+.btn {
     color: white;
     font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
     background: #e91e63;
     opacity: 1;
     border-radius: 15px;
@@ -140,7 +153,7 @@ button {
     top: 5vh;
 }
 
-button:hover {
+.btn:hover {
     color: white;
     opacity: 0.8;
 }
@@ -155,12 +168,17 @@ button:hover {
 
 #pricing {
     color: black;
-    box-sizing: border-box;
+    text-align: center;
 }
 
 #pricing > h1 {
-    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    padding-top: 2%;
+    font-family: 'Nunito', sans-serif;
 }
+
+#pricing > p {padding: 0% 25% 2%;}
 
 .column {
     float: left;
@@ -168,7 +186,6 @@ button:hover {
     padding: 0 10px;
   }
   
-
 .card > p > i {font-size: 8vh;}
 
 .row {margin: 0 -5px 0 8vw;}
@@ -180,8 +197,14 @@ button:hover {
   }
   
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
     padding: 16px;
     text-align: center;
     background-color: #f1f1f1;
   }
+
+.gradient {
+    color: white;
+    background-image: linear-gradient(to right bottom, #e91e63, #dc0670, #cb007d, #b70588, 
+    #9f1692, #921798, #821b9e, #701fa3, #671ba8, #5d17ae, #4f15b3, #3d14b9);    
+}

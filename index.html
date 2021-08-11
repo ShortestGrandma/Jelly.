@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,17 +10,20 @@
   <link rel="stylesheet" href="css/default.css">
 </head>
 <body>
+<div id="content">
     <header>
-        <span>Jelly.</span>
-        <nav id="navbar">
-            <a href="#">HOME</a>
-            <a href="#" id="box">PRICING</a>
-            <a href="#">GALLERY</a>
-            <a href="#">ABOUT</a>
-            <a href="#">CONTACT</a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="https://discord.gg/j8CEYPFhxs" id="heart"><i class="fas fa-heart"></i></a>
-        </nav>
+        <div class="navbar">
+            <a href="index.html" class="logo">Jelly.</a>
+            <nav class="navlist">
+                <a href="#" class="nav-link">HOME</a>
+                <a href="#" class="nav-link" id="box">PRICING</a>
+                <a href="#" class="nav-link">GALLERY</a>
+                <a href="#" class="nav-link">ABOUT</a>
+                <a href="#" class="nav-link">CONTACT</a>
+                <a href="#" class="nav-link"><i class="fab fa-instagram"></i></a>
+                <a href="https://discord.gg/j8CEYPFhxs" class="nav-link"id="heart"><i class="fas fa-heart"></i></a>
+            </nav>
+        </div>
     </header>
     <section id="home">
         <div class="main">
@@ -31,17 +34,19 @@
             Nunc maximus, nulla utcommodo sagittis, sapien dui mattis 
             dui, non pulvinar lorem felis nec erat.
             </p>
-            <button type="button">Start Here</button>
+            <a href="#" class="btn">Start Here</a>
         </div>
     </section>
     <section id="pricing">
         <h1>Pricing</h1>
+        <p>Please carefully read in-order to receive your dream discord server. 
+            Any questions or concerns, please contact me. Let's get started!
+        </p>
         <div class="row">
             <div class="column">
                 <div class="card">
-                    <p><i class="fas fa-dice-one"></i></p>
                     <h2>Basic</h2>
-                    <h3>$10</h3>
+                    <h3>$9.99</h3>
                     <p>Unlimited Channels</p>
                     <p>Basic Bots</p>
                     <p>Unlimited Roles</p>
@@ -49,29 +54,32 @@
                 </div>
             </div>
             <div class="column">
-                <div class="card">
-                    <p><i class="fas fa-dice-two"></i></p>
+                <div class="card gradient">
                     <h1>Standard</h1>
-                    <h3>$15</h3>
-                    <p>Includes everything in basic Package</li>
-                    <p>Verification System</li>
-                    <p>Leveling System</li>
-                    <p>Simple Banners</li>
-                    <p>Auto Twitch & Youtube Notifications</li>
-                    <p>Setup Community/Welcome Tab</li>
+                    <h3>$14.99</h3>
+                    <p>Includes everything in basic Package</p>
+                    <p>Verification System</p>
+                    <p>Leveling System</p>
+                    <p>Simple Banners</p>
+                    <p>Auto Twitch & Youtube Notifications</p>
+                    <p>Setup Community/Welcome Tab</p>
                 </div>
             </div>
             <div class="column">
                 <div class="card">
-                    <p><i class="fas fa-dice-three"></i></p>
                     <h2>Premium</h2>
-                    <h3>$25</h3>
+                    <h3>$24.99</h3>
                     <p>Includes everything in basic & standard package</p>
                     <p>50+ emoji Package</p>
                     <p>Advanced Banners</p>
                     <p>Custom Webhooks</p>              
                 </div>
             </div>
+        </div>
     </section>
+    <script>
+
+    </script>
+</div>
 </body>
 </html>
