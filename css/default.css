@@ -22,7 +22,7 @@ body {
     color: white;
     font-size: 16px;
     font-family: 'Source Sans Pro', sans-serif;
-    overflow: auto;/*overflow: hidden; Stop the page from scrolling */
+    overflow-x: hidden;/*overflow: hidden; Stop the page from scrolling */
 }
 
 /* 
@@ -39,6 +39,7 @@ header {
     left: 0;
     width: 100%;
     transition: background-color .5s ease;
+    z-index: 1000;
 }
 
 .logo { /* Jelly text */
@@ -54,6 +55,7 @@ header {
 .navbar { /* The whole navbarrr */
     display: flex; /* Sets the flexible length on flexible items */
     justify-content: space-between;
+    transition: height .5s ease;
 }
 
 .nav-link { /* Styling the nav links*/
@@ -65,6 +67,19 @@ header {
     vertical-align: middle;
     font-family: 'Nunito', sans-serif;
     padding: 18px;
+}
+
+.nav-link::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s ease;
 }
 
 .nav-link:last-child { /* Last element among a group of sibling elements / heart */
@@ -81,26 +96,49 @@ header {
     font-size: 20px;
 }
 
+/* For the nav scrolling  */
+
 .scrolling-active {
     background-color: #fff;
     box-shadow: 0 3px 1rem rgba(0,0,0.1);
 }
 
+.scrolling-active .navbar {
+    height: 6.6rem;
+}
+
+.scrolling-active .navbar a {
+    color: #313131;
+}
+
+.scrolling-active #box{
+    background-color: #e91e63;
+    color: #fff;
+}
+
+.scrolling-active #box:hover {
+    background-color: #151515;
+}
+
+.scrolling-active .nav-link::after {
+    background-color: #313131;
+}
+/*---------------------------*/
+
 #box { /* Box around the pricing */
     width: 100vw;
     height: 100vh;
-    background: #e91e63;
-    opacity: 1;
+    background-color: #e91e63;
     border-radius: 15px;
     padding: 12px 15px;
+    transition: background-color .5s ease;
 }
 
 #box:hover {
     color: white;
-    opacity: 0.8;
 }
 
-#heart:hover {
+#heart {
     color: #e91e63;
 }
 
@@ -139,13 +177,12 @@ header {
     font-family: 'Nunito', sans-serif;
 }
 
-.btn {
+#btn {
     color: white;
     font-family: 'Nunito', sans-serif;
     font-size: 14px;
     text-decoration: none;
     background: #e91e63;
-    opacity: 1;
     border-radius: 15px;
     border: none;
     padding: 12px 40px;
@@ -153,9 +190,8 @@ header {
     top: 5vh;
 }
 
-.btn:hover {
+#btn:hover {
     color: white;
-    opacity: 0.8;
 }
 
 /* 
@@ -171,6 +207,7 @@ header {
     text-align: center;
 }
 
+/* Pricing Description */
 #pricing > h1 {
     font-size: 2em;
     font-weight: bold;
@@ -179,6 +216,7 @@ header {
 }
 
 #pricing > p {padding: 0% 25% 2%;}
+/*---------------------------*/
 
 .column {
     float: left;
@@ -186,8 +224,6 @@ header {
     padding: 0 10px;
   }
   
-.card > p > i {font-size: 8vh;}
-
 .row {margin: 0 -5px 0 8vw;}
   
 .row:after {
@@ -196,15 +232,46 @@ header {
     clear: both;
   }
   
-.card {
-    border-radius: 10px;
-    padding: 16px;
-    text-align: center;
-    background-color: #f1f1f1;
-  }
+/* Card Styling */
 
-.gradient {
-    color: white;
-    background-image: linear-gradient(to right bottom, #e91e63, #dc0670, #cb007d, #b70588, 
-    #9f1692, #921798, #821b9e, #701fa3, #671ba8, #5d17ae, #4f15b3, #3d14b9);    
+.card {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
 }
+
+.card li {
+    border-bottom: 1px solid #eee;
+    padding: 25px;
+    text-align: center;
+}
+
+.card .title {
+    font-size: 2em;
+}
+
+.card .color {
+    background-color: #eee;
+    font-size: 25px;
+}
+
+.border {
+    border: 2px solid #e91e63;
+}
+
+.btn-buy {
+    color: white;
+    font-size: 14px;
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    background-color: #e91e63;
+    border-radius: 15px;
+    padding: 12px 15px;
+    transition: background-color 0.5s ease;
+}
+
+.btn-buy:hover {
+    background-color: #151515;
+}
+/*---------------------------*/
