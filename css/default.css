@@ -58,6 +58,10 @@ header {
     transition: height .5s ease;
 }
 
+.nav-link:hover {
+    color: #151515;
+}
+
 .nav-link { /* Styling the nav links*/
     color: white;
     font-weight: bold;
@@ -120,6 +124,10 @@ header {
     background-color: #151515;
 }
 
+.scrolling-active .nav-link:hover {
+    color: #e91e63;
+}
+
 .scrolling-active .nav-link::after {
     background-color: #313131;
 }
@@ -136,6 +144,7 @@ header {
 
 #box:hover {
     color: white;
+    background-color: #151515;
 }
 
 #heart {
@@ -188,10 +197,12 @@ header {
     padding: 12px 40px;
     position: relative;
     top: 5vh;
+    transition: background-color 0.5s ease;
 }
 
 #btn:hover {
     color: white;
+    background-color: #151515;
 }
 
 /* 
