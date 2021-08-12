@@ -121,7 +121,7 @@ header {
 }
 
 .scrolling-active #box:hover {
-    background-color: #151515;
+    background-color: #e03d8f;
 }
 
 .scrolling-active .nav-link:hover {
@@ -140,11 +140,12 @@ header {
     border-radius: 15px;
     padding: 12px 15px;
     transition: background-color .5s ease;
+    box-shadow: 0 0 8px #e60977;
 }
 
 #box:hover {
     color: white;
-    background-color: #151515;
+    background-color: #e03d8f;
 }
 
 #heart {
@@ -197,12 +198,14 @@ header {
     padding: 12px 40px;
     position: relative;
     top: 5vh;
+
     transition: background-color 0.5s ease;
+    box-shadow: 0 0 8px #e60977;
 }
 
 #btn:hover {
     color: white;
-    background-color: #151515;
+    background-color: #e03d8f;
 }
 
 /* 
@@ -246,29 +249,36 @@ header {
 /* Card Styling */
 
 .card {
-    list-style-type: none;
-    border: 1px solid #eee;
     margin: 0;
     padding: 0;
+    list-style-type: none;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    box-shadow: 0 0 8px rgb(156, 156, 156);
 }
 
 .card li {
-    border-bottom: 1px solid #eee;
-    padding: 25px;
+    padding: 20px;
     text-align: center;
+    font-weight: bold;
 }
 
-.card .title {
-    font-size: 2em;
+.title {
+    color: white;
+    display: inline-block;
+    background-color: #e91e63;
+    padding: 12px 30px !important;
+    border-radius: 0 0 20px 20px;
+    font-size: 20px;
+    text-transform: uppercase;
 }
 
-.card .color {
-    background-color: #eee;
+.price {
+    font-size: 4em;
+}
+
+.price sup {
     font-size: 25px;
-}
-
-.border {
-    border: 2px solid #e91e63;
 }
 
 .btn-buy {
@@ -279,10 +289,13 @@ header {
     background-color: #e91e63;
     border-radius: 15px;
     padding: 12px 15px;
+
     transition: background-color 0.5s ease;
+    box-shadow: 0 0 8px #e60977;
+    display: inline-block;
 }
 
 .btn-buy:hover {
-    background-color: #151515;
+    background-color: #e03d8f;
 }
 /*---------------------------*/
