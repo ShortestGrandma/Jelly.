@@ -1,0 +1,66 @@
+    <section id="testimonials">
+        <div class="moblie">
+            <h1>Testimonials</h1>
+            <div class="testimonial">
+                <div class="container">
+                    <div class="col">
+                        <div class="card-box">
+                            <div class="name">Andrea Lane</div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+                                unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            </p>
+                        </div>
+                        <div class="card-box">
+                            <div class="name">Simon Relish</div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+                                unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <section id="myModal" class="gallery">
+        <div class="gallery-container">
+            <div class="slide">
+                <img src="images/firstjoin.png" style="width: 100;">
+            </div>
+            <div class="slide">
+                <img src="images/self-assign.png" style="width: 100;"
+            </div>
+            <div class="slide">
+                <img src="images/welcomescreen.png" style="width: 100;">
+            </div>
+            <div class="slide">
+                <img src="images/user.png" style="width: 100;">
+            </div>
+            <div class="slide">
+                <img src="images/roles.png" style="width: 100;">
+            </div>
+            <div class="slide">
+                <img src="images/emojis.png" style="width: 100;">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </section>
